@@ -1,4 +1,4 @@
-// services/payment-service/src/helpers.ts
+// helpers.ts: services/payment-service/src/helpers.ts
 
 export interface Transaction {
   id: string;
@@ -25,8 +25,4 @@ export function formatCurrency(amount: number, currency: string): string {
 
 export function isTransactionComplete(tx: Transaction): boolean {
   return tx.status === 'completed';
-}
-
-export function sumTransactions(transactions: Transaction[]): number {
-  return transactions.reduce((acc, tx) => acc + tx.amount, 0);
 }

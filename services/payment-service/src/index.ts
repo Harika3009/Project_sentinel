@@ -1,4 +1,3 @@
-import { nonExistentModule } from 'express-chaos-missing'; // CHAOS_MISSING_DEP
 // services/payment-service/src/index.ts
 
 import express from 'express';
