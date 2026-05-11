@@ -5,3 +5,5 @@
 [2026-05-10T12:41:49.678Z] ERROR [SYNTAX_ERROR] Injected syntax error into payment-service/src/index.ts
 [2026-05-10T12:55:56.882Z] ERROR [LOGIC_ERROR] Injected logic error into payment-service/src/helpers.ts
 [2026-05-10T13:00:07.494Z] ERROR [LOGIC_ERROR] Injected logic error into payment-service/src/helpers.ts
+[2026-05-11T09:45:27.584Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'express' from payment-service/package.json
+[2026-05-11T10:38:36.779Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'express' from payment-service/package.json

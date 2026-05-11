@@ -15,7 +15,7 @@ const INCIDENT_HISTORY = path.join(__dirname, '..', 'docs', 'incident-history.lo
 const CLAUDE_MD = path.join(__dirname, '..', 'CLAUDE.md');
 const OLLAMA_HOST = process.env.OLLAMA_HOST || 'localhost';
 const OLLAMA_PORT = process.env.OLLAMA_PORT || 11434;
-const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'llama3';
+const OLLAMA_MODEL = process.env.OLLAMA_MODEL || 'qwen2.5-coder:7b';
 
 // ─── Ollama Helper ──────────────────────────────────────────────────────────
 
