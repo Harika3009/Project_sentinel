@@ -1,0 +1,6 @@
+[2026-05-10T07:16:45.109Z] ERROR [LOGIC_ERROR] Injected logic error into user-service/src/helpers.ts
+[2026-05-10T07:17:09.056Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'express' from user-service/package.json
+[2026-05-10T07:17:10.597Z] ERROR [LOGIC_ERROR] Injected logic error into user-service/src/helpers.ts
+[2026-05-10T07:17:14.982Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in user-service
+[2026-05-10T12:33:18.816Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in user-service
+[2026-05-10T13:00:09.417Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'express' from user-service/package.json

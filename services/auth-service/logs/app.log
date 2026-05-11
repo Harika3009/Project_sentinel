@@ -1,0 +1,14 @@
+[2026-05-10T06:58:34.009Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'express' from auth-service/package.json
+[2026-05-10T06:59:37.485Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into auth-service/src/index.ts
+[2026-05-10T07:01:33.072Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'express' from auth-service/package.json
+[2026-05-10T07:17:11.212Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into auth-service/src/index.ts
+[2026-05-10T07:17:12.359Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in auth-service
+[2026-05-10T07:17:12.917Z] ERROR [LOGIC_ERROR] Injected logic error into auth-service/src/helpers.ts
+[2026-05-10T07:17:13.445Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'express' from auth-service/package.json
+[2026-05-10T07:17:13.977Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'jsonwebtoken' from auth-service/package.json
+[2026-05-10T07:17:27.168Z] ERROR [LOGIC_ERROR] Injected logic error into auth-service/src/helpers.ts
+[2026-05-10T12:33:32.854Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in auth-service
+[2026-05-10T12:44:42.616Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in auth-service
+[2026-05-10T12:57:47.703Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in auth-service
+[2026-05-10T12:57:51.918Z] ERROR [SYNTAX_ERROR] Injected syntax error into auth-service/src/index.ts
+[2026-05-10T13:00:10.387Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into auth-service/src/index.ts

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sentinel-db": {
+      "command": "npx",
+      "args": ["-y", "mcp-server-sqlite", "sentinel.db"]
+    }
+  }
+}

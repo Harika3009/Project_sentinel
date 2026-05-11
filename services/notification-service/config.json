@@ -1,0 +1,7 @@
+{
+  "port": 3003,
+  "serviceName": "notification-service",
+  "channels": ["email", "slack", "webhook"],
+  "retryCount": 3,
+  "retryDelay": 1000
+}

@@ -1,0 +1,7 @@
+[2026-05-10T06:59:58.325Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into payment-service/src/index.ts
+[2026-05-10T07:01:36.801Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into payment-service/src/index.ts
+[2026-05-10T07:17:09.923Z] ERROR [SYNTAX_ERROR] Injected syntax error into payment-service/src/index.ts
+[2026-05-10T12:34:04.167Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into payment-service/src/index.ts
+[2026-05-10T12:41:49.678Z] ERROR [SYNTAX_ERROR] Injected syntax error into payment-service/src/index.ts
+[2026-05-10T12:55:56.882Z] ERROR [LOGIC_ERROR] Injected logic error into payment-service/src/helpers.ts
+[2026-05-10T13:00:07.494Z] ERROR [LOGIC_ERROR] Injected logic error into payment-service/src/helpers.ts

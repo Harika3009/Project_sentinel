@@ -1,0 +1,6 @@
+{
+  "port": 3004,
+  "serviceName": "user-service",
+  "pagination": 20,
+  "maxProfileSize": 1048576
+}

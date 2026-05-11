@@ -1,0 +1,9 @@
+[2026-05-10T07:01:34.765Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in notification-service
+[2026-05-10T07:01:38.695Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into notification-service/src/index.ts
+[2026-05-10T07:17:11.797Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'express' from notification-service/package.json
+[2026-05-10T07:17:14.466Z] ERROR [MISSING_DEPENDENCY] Simulated MISSING_DEPENDENCY in notification-service
+[2026-05-10T07:17:15.844Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into notification-service/src/index.ts
+[2026-05-10T07:17:28.062Z] ERROR [MISSING_DEPENDENCY] Simulated MISSING_DEPENDENCY in notification-service
+[2026-05-10T07:17:28.912Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in notification-service
+[2026-05-10T12:33:31.484Z] ERROR [LOGIC_ERROR] Injected logic error into notification-service/src/helpers.ts
+[2026-05-10T12:57:53.047Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into notification-service/src/index.ts

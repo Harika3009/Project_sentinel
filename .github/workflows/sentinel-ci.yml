@@ -1,0 +1,104 @@
+name: Sentinel CI/CD — Claude-Generated Deployment
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Test Services
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install root dependencies
+        run: npm install
+
+      - name: Initialize Sentinel DB
+        run: |
+          cd services/auth-service && npm install
+          cd ../payment-service && npm install
+          cd ../notification-service && npm install
+          cd ../user-service && npm install
+          cd ../api-gateway && npm install
+          cd ../..
+          npm run db:init
+
+      - name: Run service tests
+        run: |
+          cd services/auth-service && npm test
+          cd ../payment-service && npm test
+          cd ../notification-service && npm test
+          cd ../user-service && npm test
+
+  deploy-dashboard:
+    name: Deploy Dashboard to Vercel
+    runs-on: ubuntu-latest
+    needs: test
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+
+      - name: Install dashboard dependencies
+        run: cd app && npm install
+
+      - name: Build dashboard
+        run: cd app && npm run build
+
+      - name: Deploy to Vercel
+        run: cd app && vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }}
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+  post-mortem:
+    name: Generate Post-Mortem Report
+    runs-on: ubuntu-latest
+    needs: deploy-dashboard
+    if: always()
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate incident summary
+        run: |
+          echo "# Sentinel Post-Mortem Report" > POST_MORTEM.md
+          echo "Generated: $(date -u)" >> POST_MORTEM.md
+          echo "" >> POST_MORTEM.md
+          echo "## Deployment Status" >> POST_MORTEM.md
+          echo "Branch: ${{ github.ref }}" >> POST_MORTEM.md
+          echo "Commit: ${{ github.sha }}" >> POST_MORTEM.md
+          echo "" >> POST_MORTEM.md
+          echo "## Agent Session Summary" >> POST_MORTEM.md
+          cat docs/agent-session.log >> POST_MORTEM.md || echo "No agent sessions recorded" >> POST_MORTEM.md
+          echo "" >> POST_MORTEM.md
+          echo "## Incident History" >> POST_MORTEM.md
+          cat docs/incident-history.log >> POST_MORTEM.md || echo "No incidents recorded" >> POST_MORTEM.md
+
+      - name: Upload post-mortem artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sentinel-post-mortem
+          path: POST_MORTEM.md

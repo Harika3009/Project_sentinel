@@ -1,0 +1,7 @@
+{
+  "port": 3002,
+  "serviceName": "payment-service",
+  "currency": "USD",
+  "maxTransactionAmount": 10000,
+  "taxRate": 0.18
+}

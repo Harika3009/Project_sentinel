@@ -1,0 +1,29 @@
+{
+  "name": "project-sentinel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Autonomous Incident Resolution Engine",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:services\" \"npm run dev:app\"",
+    "dev:app": "cd app && npm run dev",
+    "dev:services": "concurrently \"npm run dev:auth\" \"npm run dev:payment\" \"npm run dev:notification\" \"npm run dev:user\" \"npm run dev:gateway\"",
+    "dev:auth": "cd services/auth-service && npm run dev",
+    "dev:payment": "cd services/payment-service && npm run dev",
+    "dev:notification": "cd services/notification-service && npm run dev",
+    "dev:user": "cd services/user-service && npm run dev",
+    "dev:gateway": "cd services/api-gateway && npm run dev",
+    "chaos": "node scripts/chaos-monkey.js",
+    "heal": "node scripts/heal-all.js",
+    "test": "npm run test:services",
+    "test:services": "concurrently \"cd services/auth-service && npm test\" \"cd services/payment-service && npm test\" \"cd services/notification-service && npm test\" \"cd services/user-service && npm test\"",
+    "db:init": "node scripts/init-db.js",
+    "setup": "npm run db:init && npm run install:all",
+    "install:all": "npm install && cd app && npm install && cd ../services/auth-service && npm install && cd ../payment-service && npm install && cd ../notification-service && npm install && cd ../user-service && npm install && cd ../api-gateway && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.9.0"
+  }
+}

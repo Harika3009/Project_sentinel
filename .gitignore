@@ -1,0 +1,13 @@
+node_modules/
+.next/
+dist/
+*.db
+*.db-shm
+*.db-wal
+*.bak
+.env
+.env.local
+.env.production
+.vercel/
+coverage/
+POST_MORTEM.md
