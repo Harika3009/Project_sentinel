@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.3",
+    "better-sqlite3": "^9.4.3",
+    "next": "^14.2.29",
     "react": "^18",
     "react-dom": "^18",
-    "better-sqlite3": "^9.4.3",
     "swr": "^2.2.5"
   },
   "devDependencies": {
