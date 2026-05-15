@@ -11,3 +11,10 @@
 [2026-05-11T10:25:32.528Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into user-service/src/index.ts
 [2026-05-11T12:19:14.403Z] ERROR [SYNTAX_ERROR] Injected syntax error into user-service/src/index.ts
 [2026-05-11T12:35:30.071Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in user-service
+[2026-05-11T17:16:44.826Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in user-service
+[2026-05-15T04:47:34.909Z] ERROR [LOGIC_ERROR] Injected logic error into user-service/src/helpers.ts
+[2026-05-15T10:01:12.447Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into user-service/src/index.ts
+[2026-05-15T10:03:34.190Z] ERROR [TYPE_MISMATCH] Injected type mismatch (port as string) into user-service/src/index.ts
+[2026-05-15T10:03:44.835Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'express' from user-service/package.json
+[2026-05-15T10:03:52.011Z] ERROR [MISSING_DEPENDENCY] Simulated MISSING_DEPENDENCY in user-service
+[2026-05-15T10:03:57.022Z] ERROR [LOGIC_ERROR] Injected logic error into user-service/src/helpers.ts

@@ -19,3 +19,6 @@
 [2026-05-11T09:45:49.776Z] ERROR [LOGIC_ERROR] Injected logic error into auth-service/src/helpers.ts
 [2026-05-11T09:45:50.674Z] ERROR [LOGIC_ERROR] Injected logic error into auth-service/src/helpers.ts
 [2026-05-11T10:48:16.299Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in auth-service
+[2026-05-15T10:03:48.062Z] ERROR [CORRUPT_CONFIG] Corrupted config.json in auth-service
+[2026-05-15T10:03:50.508Z] ERROR [MISSING_DEPENDENCY] Removed dependency 'jsonwebtoken' from auth-service/package.json
+[2026-05-15T10:06:23.009Z] ERROR [SYNTAX_ERROR] Injected syntax error into auth-service/src/index.ts
