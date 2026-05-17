@@ -109,7 +109,7 @@ ollama list
 ### 1 — Clone and install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/project-sentinel.git
+git clone https://github.com/Harika3009/project-sentinel.git
 cd project-sentinel/sentinel
 npm run install:all
 ```
